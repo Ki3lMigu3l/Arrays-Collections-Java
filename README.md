@@ -22,16 +22,10 @@ Cada elemento em um array pode ser acessado por meio de um índice numérico, on
 
 #### Exemplo:
 
-```java
-// Declaração e inicialização de um array de inteiros
-int[] numeros = {1, 2, 3, 4, 5};
+<p align="center">
+  <img src="https://github.com/Ki3lMigu3l/Arrays-Collections-Java/blob/main/readme/Exemplo-Array.png" alt="Descrição da Imagem" width="500"/>
+</p>
 
-// Acessando o valor no índice 2 (terceiro elemento)
-int valor = numeros[2]; // valor será 3
-
-// Alterando o valor no índice 1
-numeros[1] = 10; // agora o array é {1, 10, 3, 4, 5}
-```
 <br>
 
 <h2 align="center">Equals and Hashcode</h2>
