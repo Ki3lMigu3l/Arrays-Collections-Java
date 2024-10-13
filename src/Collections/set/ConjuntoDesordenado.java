@@ -1,9 +1,9 @@
-package Collections;
+package Collections.set;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class ExercicioSet {
+public class ConjuntoDesordenado {
     public static void main(String[] args) {
 
         HashSet primeiroConjunto = new HashSet();
