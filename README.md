@@ -72,3 +72,69 @@ public class Equals {
 Neste exemplo, dois objetos da classe Usuario são considerados iguais se tiverem o mesmo nome e email.
 
 O método hashCode() retorna um valor inteiro que representa o objeto, sendo utilizado em estruturas de dados baseadas em hash (como HashMap e HashSet). A regra geral é que se dois objetos são "iguais" segundo o método equals(), então eles devem ter o mesmo valor de hashCode().
+
+### Collections
+
+Neste projeto, abordamos as principais interfaces e implementações de coleções em Java: **List**, **Map**, **Queue**, **Set** e **Stack**. Essas coleções são parte do framework de collections, fornecendo estruturas de dados versáteis para diferentes necessidades de manipulação e armazenamento de dados.
+
+<br>
+
+### 1. List
+Uma **List** é uma coleção ordenada que permite elementos duplicados. A ordem dos elementos é mantida e você pode acessar os itens pelos seus índices.
+
+### Implementações Comuns:
+- `ArrayList`: Oferece acesso rápido por índice, mas operações de inserção/remoção podem ser lentas, dependendo da posição.
+- `LinkedList`: Operações de inserção e remoção são rápidas, mas o acesso por índice é mais lento que no `ArrayList`.
+
+<br>
+
+### 2. Map
+Um **Map** é uma coleção que mapeia chaves para valores. Cada chave pode estar associada a um único valor, e não pode haver chaves duplicadas.
+
+- `HashMap`: Implementação mais comum, não garante ordem de inserção.
+- `TreeMap`: Mantém as chaves ordenadas.
+- `LinkedHashMap`: Mantém a ordem de inserção das chaves.
+
+  <br>
+
+### 3. Queue
+Um **Queue** é uma coleção projetada para manter em uma ordem específica, normalmente seguindo o principio de FIFO (First-in, First-out), onde o primeiro elemento inserido é o primeiro a ser removido.
+
+- `LinkedList`: Suporta operações de fila e lista.
+- `PriorityQueue`: Organiza elementos com base em prioridade.
+  
+### Exemplo:
+
+```java
+Queue<String> queue = new LinkedList<>();
+queue.add("Elemento 1");
+queue.add("Elemento 2");
+queue.poll(); // Remove e retorna "Elemento 1"
+```
+
+<br>
+
+### Set
+Um Set é uma coleção que não permite elementos duplicados e não garante uma ordem específica (a menos que você utilize uma implementação ordenada).
+
+- `HashSet`: Não mantém a ordem de inserção.
+- `LinkedHashSet`: Mantém a ordem de inserção.
+- `TreeSet`: Mantém os elementos ordenados.
+
+<br>
+
+### Stack
+Uma Stack (pilha) é uma coleção baseada no principio de LIFO (Last-In, First-Out), onde o último elemento inserido é o primeiro a ser removido.
+
+### Implementações Comuns:
+- `ArrayDeque`: Implementação de `Deque` que é mais eficiente que `Stack` herdada de `Vector`.
+- `LinkedList`: Também implementa `Deque` e pode ser usada como uma pilha.
+
+### Características:
+- LIFO: O último elemento a entrar é o primeiro a sair.
+- Evita a sincronização herdada da classe `Stack`, sendo mais rápida para cenários não concorrentes.
+- Útil para resolver problemas que envolvem recursão, como avaliação de expressões ou controle de fluxo.
+
+
+### Conclusão
+Este projeto abordou as principais coleções do Java, incluindo List, Map, Queue, Set e Stack, destacando suas implementações e cenários de uso. Também optamos por usar Deque para representar pilhas, devido à sua eficiência superior em relação à classe Stack. Com isso, garantimos um entendimento sólido das estruturas de dados disponíveis no Java, permitindo escolher a coleção adequada para cada necessidade, otimizando a performance e a organização do código.
